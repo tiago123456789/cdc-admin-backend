@@ -29,7 +29,7 @@ class AuthorService {
         const existFieldsInvalids = invalidsFields.length > 0;
         if (existFieldsInvalids) {
             const fields = invalidsFields.join(", ");
-            const message = `The fiels: ${fields} is requireds!`;
+            const message = `The fields: ${fields} is requireds!`;
             throw new Error(message);
         }
     }

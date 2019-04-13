@@ -9,6 +9,7 @@ class AuthorDao extends Dao {
     getFieldsTable() {
         return ["name", "email"];
     }
+
 }
 
 module.exports = AuthorDao;

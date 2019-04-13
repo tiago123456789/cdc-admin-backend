@@ -1,9 +1,9 @@
-const AuthorBo = require("../services/AuthorService");
+const AuthorService = require("../services/AuthorService");
 
 class AuthorEndpoint {
 
     constructor() {
-        this._bo = new AuthorBo();
+        this._bo = new AuthorService();
         this.findAll = this.findAll.bind(this);
         this.create = this.create.bind(this);
     }

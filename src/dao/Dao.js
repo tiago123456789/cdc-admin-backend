@@ -31,9 +31,10 @@ class Dao {
     create(newRegister = {}) {
         const fields = this.getFieldsTable().join(", "); 
         let sql = `INSERT INTO ${this._table}(${fields}) VALUES(`;
-        sql += this.getFieldsTable.map(field => `${newRegister[field]}`).join(", ");
+        sql += this.getFieldsTable().map(field => `'${newRegister[field]}'`).join(", ");
         sql += ")";
         return new Promise((resolve, reject) => {
+            console.log(sql);
             this._connection.query(sql, (err, results) => {
                 if (err) {
                     reject(err);

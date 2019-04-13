@@ -1,9 +1,9 @@
-const BookBo = require("../services/BookService");
+const BookService = require("../services/BookService");
 
 class BookEndpoint {
 
     constructor() {
-        this._bo = new BookBo();
+        this._bo = new BookService();
         this.findAll = this.findAll.bind(this);
         this.create = this.create.bind(this);
     }
