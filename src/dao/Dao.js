@@ -34,7 +34,6 @@ class Dao {
         sql += this.getFieldsTable().map(field => `'${newRegister[field]}'`).join(", ");
         sql += ")";
         return new Promise((resolve, reject) => {
-            console.log(sql);
             this._connection.query(sql, (err, results) => {
                 if (err) {
                     reject(err);
